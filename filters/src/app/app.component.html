@@ -1,5 +1,5 @@
 <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
-    <h5 class="my-0 mr-md-auto font-weight-normal">{{nameCompany}}</h5>
+    <h5 class="my-0 mr-md-auto font-weight-normal">{{nameCompany | titlecase}}</h5>
     <nav class="my-2 my-md-0 mr-md-3">
         <a class="p-2 text-dark" href="#">Principal</a>
         <a class="p-2 text-dark" href="#">About us</a>
@@ -10,7 +10,7 @@
 </div>
 
 <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-    <h1 class="display-4">Packages</h1>
+    <h1 class="display-4">{{titulo | uppercase }}</h1>
     <p class="lead">These are the packages we offer to increment your bussines</p>
 </div>
 
@@ -21,7 +21,7 @@
                 <h4 class="my-0 font-weight-normal">Basic</h4>
             </div>
             <div class="card-body">
-                <h1 class="card-title pricing-card-title">$100<small class="text-muted">/Month</small></h1>
+                <h1 class="card-title pricing-card-title">{{currency | currency : 'USD':'symbol':'.0-0'}}<small class="text-muted">/{{month | lowercase}}</small></h1>
                 <ul class="list-unstyled mt-3 mb-4">
                     <li>Social Media</li>
                     <li>Branding</li>
@@ -36,7 +36,7 @@
                 <h4 class="my-0 font-weight-normal">Recommended</h4>
             </div>
             <div class="card-body">
-                <h1 class="card-title pricing-card-title">$500<small class="text-muted">/Month</small></h1>
+                <h1 class="card-title pricing-card-title">{{currency | currency : 'JPY':'symbol':'.0-0'}}<small class="text-muted">/{{month | lowercase}}</small></h1>
                 <ul class="list-unstyled mt-3 mb-4">
                     <li>Social Media</li>
                     <li>Branding</li>
@@ -51,7 +51,7 @@
                 <h4 class="my-0 font-weight-normal">Advanced</h4>
             </div>
             <div class="card-body">
-                <h1 class="card-title pricing-card-title">$900<small class="text-muted">/Month</small></h1>
+                <h1 class="card-title pricing-card-title">{{currency | currency : 'EUR':'symbol':'.0-0'}}<small class="text-muted">/{{month | lowercase}}</small></h1>
                 <ul class="list-unstyled mt-3 mb-4">
                     <li>Social Media</li>
                     <li>Branding</li>
@@ -67,7 +67,7 @@
         <div class="row">
             <div class="col-12 col-md">
                 <img class="mb-2" src="/docs/4.5/assets/brand/bootstrap-solid.svg" alt="" width="24" height="24">
-                <small class="d-block mb-3 text-muted">&copy; 2019-2020</small>
+                <small class="d-block mb-3 text-muted">&copy; {{date | date:'dd/MM/yyyy'}}</small>
             </div>
             <div class="col-6 col-md">
                 <h5></h5>

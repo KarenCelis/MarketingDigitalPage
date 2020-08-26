@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  nameCompany= 'Marketing Digital';
+  nameCompany= 'marketing digital';
+  titulo = 'package';
+  date = new Date();
+  currency = 100;
+  month='Month';
 }
