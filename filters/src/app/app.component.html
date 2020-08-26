@@ -16,47 +16,17 @@
 
 <div class="container">
     <div class="card-deck mb-3 text-center">
-        <div class="card mb-4 shadow-sm">
+        <div class="card mb-4 shadow-sm" *ngFor="let pack of packages">
             <div class="card-header">
-                <h4 class="my-0 font-weight-normal">Basic</h4>
+                <h4 class="my-0 font-weight-normal">{{pack.title}}</h4>
             </div>
             <div class="card-body">
-                <h1 class="card-title pricing-card-title">{{currency | currency : 'USD':'symbol':'.0-0'}}<small class="text-muted">/{{month | lowercase}}</small></h1>
+                <h1 class="card-title pricing-card-title">{{pack.price | currency : 'USD':'symbol':'.0-0'}}<small class="text-muted">/{{pack.month | lowercase}}</small></h1>
                 <ul class="list-unstyled mt-3 mb-4">
-                    <li>Social Media</li>
-                    <li>Branding</li>
-                    <li>Image Desing</li>
-                    <li>-</li>
-                </ul>
-                <button type="button" class="btn btn-lg btn-block btn-outline-primary">Purchase</button>
-            </div>
-        </div>
-        <div class="card mb-4 shadow-sm">
-            <div class="card-header">
-                <h4 class="my-0 font-weight-normal">Recommended</h4>
-            </div>
-            <div class="card-body">
-                <h1 class="card-title pricing-card-title">{{currency | currency : 'JPY':'symbol':'.0-0'}}<small class="text-muted">/{{month | lowercase}}</small></h1>
-                <ul class="list-unstyled mt-3 mb-4">
-                    <li>Social Media</li>
-                    <li>Branding</li>
-                    <li>Image Desing</li>
-                    <li>Video</li>
-                </ul>
-                <button type="button" class="btn btn-lg btn-block btn-outline-primary">Purchase</button>
-            </div>
-        </div>
-        <div class="card mb-4 shadow-sm">
-            <div class="card-header">
-                <h4 class="my-0 font-weight-normal">Advanced</h4>
-            </div>
-            <div class="card-body">
-                <h1 class="card-title pricing-card-title">{{currency | currency : 'EUR':'symbol':'.0-0'}}<small class="text-muted">/{{month | lowercase}}</small></h1>
-                <ul class="list-unstyled mt-3 mb-4">
-                    <li>Social Media</li>
-                    <li>Branding</li>
-                    <li>Image/ Video</li>
-                    <li>COmmunity Manager</li>
+                    <li>{{pack.d1}}</li>
+                    <li>{{pack.d2}}</li>
+                    <li>{{pack.d3}}</li>
+                    <li>{{pack.d4}}</li>
                 </ul>
                 <button type="button" class="btn btn-lg btn-block btn-outline-primary">Purchase</button>
             </div>
@@ -72,7 +42,7 @@
             <div class="col-6 col-md">
                 <h5></h5>
                 <ul class="list-unstyled text-small">
-
+                    {{packages | json}}
                 </ul>
             </div>
             <div class="col-6 col-md">
