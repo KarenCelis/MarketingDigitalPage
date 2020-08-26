@@ -9,11 +9,11 @@ export class AppComponent {
   nameCompany= 'marketing digital';
   titulo = 'package';
   date = new Date();
-  currency = 100;
+  /*currency = 100;
   month='Month';
 
 
-  /*packages = {
+  packages = {
     titulo: 'Basic',
     precio: 100,
     month : 'month',
